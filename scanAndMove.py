@@ -90,18 +90,18 @@ if __name__ == '__main__':
                 #dist2 = distance(GPIO_TRIGGER1, GPIO_ECHO1)
                 #dist1 = distance(GPIO_TRIGGER, GPIO_ECHO)
                 os.system('clear')
-                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
+                #print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
             #Initial detection
             if keyboard.is_pressed('f'):
                 os.system('clear')
-                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
+                #print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
                 GPIO.output(in1,GPIO.HIGH)
                 GPIO.output(in2,GPIO.LOW)
                 #GPIO.output(in3,GPIO.HIGH)
                 #GPIO.output(in4,GPIO.LOW)
             elif keyboard.is_pressed('r'):
                 os.system('clear')
-                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
+                #print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.HIGH)
                 #GPIO.output(in3,GPIO.LOW)
