@@ -17,7 +17,6 @@ GPIO_ECHO1 = 23
 in1 = 20
 in2 = 26
 en = 19
-temp1 = 1
 
 in3 = 13
 in4 = 12
