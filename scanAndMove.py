@@ -36,11 +36,11 @@ GPIO.setup(en,GPIO.OUT)
 GPIO.output(in1,GPIO.LOW)
 GPIO.output(in2,GPIO.LOW)
 
-GPIO.setup(in3,GPIO.OUT)
-GPIO.setup(in4,GPIO.OUT)
-GPIO.setup(en2,GPIO.OUT)
-GPIO.output(in3,GPIO.LOW)
-GPIO.output(in4,GPIO.LOW)
+#GPIO.setup(in3,GPIO.OUT)
+#GPIO.setup(in4,GPIO.OUT)
+#GPIO.setup(en2,GPIO.OUT)
+#GPIO.output(in3,GPIO.LOW)
+#GPIO.output(in4,GPIO.LOW)
 
 p=GPIO.PWM(en,250)
 
@@ -97,15 +97,15 @@ if __name__ == '__main__':
                 print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
                 GPIO.output(in1,GPIO.HIGH)
                 GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.HIGH)
-                GPIO.output(in4,GPIO.LOW)
+                #GPIO.output(in3,GPIO.HIGH)
+                #GPIO.output(in4,GPIO.LOW)
             elif keyboard.is_pressed('r'):
                 os.system('clear')
                 print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.HIGH)
-                GPIO.output(in3,GPIO.LOW)
-                GPIO.output(in4,GPIO.HIGH)
+                #GPIO.output(in3,GPIO.LOW)
+                #GPIO.output(in4,GPIO.HIGH)
             elif keyboard.is_pressed("i"):
                 if pwr < 100:
                     pwr += 25
@@ -123,6 +123,8 @@ if __name__ == '__main__':
             else:
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.LOW)
+                #GPIO.output(in3,GPIO.LOW)
+                #GPIO.output(in4,GPIO.LOW)
     # Reset by pressing CTRL + C
     except KeyboardInterrupt:
         print("Measurement stopped by User") 
