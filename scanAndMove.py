@@ -73,33 +73,37 @@ pwr = 50
 p.start(pwr)
 if __name__ == '__main__':
     try:
-        clr()
+        os.system('clear')
         while True:
-            #inp = input()
             #Determines time passed
             if round(time.time(), 0 ) == round(time.time(), 2):
                 dist2 = distance(GPIO_TRIGGER1, GPIO_ECHO1)
                 dist1 = distance(GPIO_TRIGGER, GPIO_ECHO)
-                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)))
+                os.system('clear')
+                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
             #Initial detection
             if keyboard.is_pressed('f'):
-                print("f")
+                os.system('clear')
+                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
                 GPIO.output(in1,GPIO.HIGH)
                 GPIO.output(in2,GPIO.LOW)
             elif keyboard.is_pressed('r'):
-                print('r')
+                os.system('clear')
+                print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.HIGH)
             elif keyboard.is_pressed("i"):
                 if pwr < 100:
                     pwr += 25
-                    print(pwr)
+                    os.system('clear')
+                    print("Power Multiplier: " + str(pwr))
                     p.ChangeDutyCycle(pwr)
                     time.sleep(0.5)
             elif keyboard.is_pressed("k"):
                 if pwr > 0:
                     pwr -= 25
-                    print(pwr)
+                    os.system('clear')
+                    print("Power Multiplier: " + str(pwr))
                     p.ChangeDutyCycle(pwr)
                     time.sleep(0.5)
             else:
