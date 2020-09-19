@@ -9,10 +9,10 @@ import keyboard
 GPIO.setmode(GPIO.BCM)
 
 #set GPIO Pins
-GPIO_TRIGGER = 18
-GPIO_ECHO = 24
-GPIO_TRIGGER1 = 22
-GPIO_ECHO1 = 23
+#GPIO_TRIGGER = 18
+#GPIO_ECHO = 24
+#GPIO_TRIGGER1 = 22
+#GPIO_ECHO1 = 23
 
 in1 = 20
 in2 = 26
@@ -24,10 +24,10 @@ en2 =  6
 
 
 #set GPIO direction (IN / OUT)
-GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
-GPIO.setup(GPIO_ECHO, GPIO.IN)
-GPIO.setup(GPIO_TRIGGER1, GPIO.OUT)
-GPIO.setup(GPIO_ECHO1, GPIO.IN)
+#GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
+#GPIO.setup(GPIO_ECHO, GPIO.IN)
+#GPIO.setup(GPIO_TRIGGER1, GPIO.OUT)
+#GPIO.setup(GPIO_ECHO1, GPIO.IN)
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(in1,GPIO.OUT)
@@ -87,8 +87,8 @@ if __name__ == '__main__':
         while True:
             #Determines time passed
             if round(time.time(), 0 ) == round(time.time(), 2):
-                dist2 = distance(GPIO_TRIGGER1, GPIO_ECHO1)
-                dist1 = distance(GPIO_TRIGGER, GPIO_ECHO)
+                #dist2 = distance(GPIO_TRIGGER1, GPIO_ECHO1)
+                #dist1 = distance(GPIO_TRIGGER, GPIO_ECHO)
                 os.system('clear')
                 print ("Sensor #1: " + str(round(dist1,2)) + " | Sensor #2: " + str(round(dist2,2)) + " | Power: " + str(pwr))
             #Initial detection
