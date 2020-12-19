@@ -65,16 +65,6 @@ def distance(gptrig, gpecho):
 
     return distance
 
-#Media Functions
-def pp():
-    keyboard.press_and_release(' ')
-def forwards():
-    keyboard.press_and_release('right')
-def backwards():
-    keyboard.press_and_release('left')
-def clr():
-    print("\n" * 40)
-
 #0 = Undetected, 1 = Left Detected, 2 = Right Detected
 state = 0
 delta1 = time.time()
